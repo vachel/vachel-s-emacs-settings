@@ -1,0 +1,36 @@
+;;;;导入CEDET的各个插件
+;; ---------------------------------------
+;; Load CEDET
+;;(load-file "~/.emacs.d/cedet/common/cedet.el")
+(require 'cedet)
+;; Enabling various SEMANTIC minor modes.  See semantic/INSTALL for more ideas.
+;; Select one of the following
+(semantic-load-enable-code-helpers)
+;; (semantic-load-enable-guady-code-helpers)
+;; (semantic-load-enable-excessive-code-helpers)
+
+;; Enable this if you develop in semantic, or develop grammars
+;; (semantic-load-enable-semantic-debugging-helpers)
+;; ---------------------------------------
+
+;;;; 配置 Emacs Code Browser
+;;(require 'ecb)
+(require 'ecb-autoloads)
+;; 指定semantic临时文件的路径，避免到处都是临时文件
+(setq semanticdb-default-save-directory "~/backups/semantic")
+;; semantic /usr/include
+(setq semanticdb-search-system-databases t)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (setq semanticdb-project-system-databases
+                  (list (semanticdb-create-database
+                         semanticdb-new-database-class
+                         "/usr/include")))))
+;; project root path
+(setq semanticdb-project-roots
+      (list
+       (expand-file-name "~")))
+;; 避免semantic占用CPU过多
+(setq-default semantic-idle-scheduler-idle-time 432000)
+
+
