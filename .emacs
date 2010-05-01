@@ -1,29 +1,45 @@
-;;no auto-saving
+;;========no auto-saving==============
 (setq-default make-backup-files nil)
-;;key setting
+
+
+;;===================key setting===========
 (global-set-key (kbd "C-;") 'set-mark-command)
-;;python
+;;=================libs================
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/myemacs/")
-(load-library "pythonsetting")
-;;cc-mode
-;;(add-to-list 'load-path "~/.emacs.d/cc-mode")
+
+
+;;=======================python========================
+;;(load-library "pythonsetting")
+
+;;===========================c&c++===================== 
 (load-library "c++setting")
-;;line number
+
+;;===============company mode ===============
+(add-to-list 'load-path "~/.emacs.d/company-0.5")
+(autoload 'company-mode "company" nil t)
+(setq company-idle-delay t)
+
+;;===========================line number==================
 (require 'linum)
 (global-linum-mode 1)
-;;yasnippet
-;;(require 'yasnippet)
-;;(yas/initialize)
+
+;;=====================yasnippet==================
+(require 'yasnippet)
+(yas/initialize)
 ;;(setq yas/expand (kbd "C-TAB"))
-;;CEDET
-(load-library "cedet")
-;;others
+
+;;========================cedet======================================
+(load-library "cedetsetting")
+
+
+
+;;============================others=======================
 (setq global-font-lock-mode t) 
 (ido-mode t)
 (setq show-paren-mode t)
 (setq show-paren-style 'parenthesis)
-(setq frame-title-formart "emacs@%b")
+
 ;;(setq-default make-backup-files nil)
 (global-set-key [(f5)] 'speedbar)
 ;;自动备份

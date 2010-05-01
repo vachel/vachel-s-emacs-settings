@@ -15,31 +15,6 @@
 ;;; hungry-delete and auto-newline
 (c-toggle-auto-hungry-state 1)
 ;;
-(defun my-indent-or-complete ()
-   (interactive)
-   (if (looking-at "\\>")
- 	  (hippie-expand nil)
- 	  (indent-for-tab-command))
- )
-(autoload 'senator-try-expand-semantic "senator")
-
-(setq hippie-expand-try-functions-list
- 	  '(
-		senator-try-expand-semantic
-		try-expand-dabbrev
-		try-expand-dabbrev-visible
-		try-expand-dabbrev-all-buffers
-		try-expand-dabbrev-from-kill
-		try-expand-list
-		try-expand-list-all-buffers
-		try-expand-line
-        try-expand-line-all-buffers
-        try-complete-file-name-partially
-        try-complete-file-name
-        try-expand-whole-kill
-        )
-)
-;;(global-set-key [(control tab)] 'my-indent-or-complete)
 ;;按键定义
 (define-key c-mode-base-map [(control \`)] 'hs-toggle-hiding)
 (define-key c-mode-base-map [(return)] 'newline-and-indent)
@@ -72,3 +47,12 @@
 )
 
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
+;;==================company mode============================
+(add-hook 'c++-mode-hook 
+	  (lambda ()
+	    (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")	
+	    (semantic-load-enable-code-helpers)
+	    (semantic-load-enable-semantic-debugging-helpers)
+	    (setq company-idle-delay t)
+	    (company-mode)))
