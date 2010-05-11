@@ -1,0 +1,25 @@
+;; Object fair_warning/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fair_warning/"
+  :tables (list 
+   (semanticdb-table "fair_warning.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("math.h" include (:system-flag t) nil [19 35])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [37 57])
+            ("main" function (:type "int") nil [60 255]))          
+    :file "fair_warning.cc"
+    :pointmax 256
+    :fsize 255
+    :lastmodtime '(19429 28891)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!vachel!src!jam!fair_warning!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

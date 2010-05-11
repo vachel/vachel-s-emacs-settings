@@ -1,0 +1,42 @@
+;; Object jam/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jam/"
+  :tables (list 
+   (semanticdb-table "shapper_chain.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio" include (:system-flag t) nil [1 16])
+            ("string" include (:system-flag t) nil [17 33])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [34 54])
+            ("main" function (:type "int") nil [56 541]))          
+    :file "shapper_chain.cc"
+    :pointmax 542
+    :fsize 541
+    :lastmodtime '(19429 24698)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "snapper_chain.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 18])
+            ("string" include (:system-flag t) nil [19 35])
+            ("math.h" include (:system-flag t) nil [36 52])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [53 73])
+            ("main" function (:type "int") nil [75 865]))          
+    :file "snapper_chain.cc"
+    :pointmax 866
+    :fsize 865
+    :lastmodtime '(19429 26600)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!vachel!src!jam!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,58 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables (list 
+   (semanticdb-table "Project.ede"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("ede-proj-project" code nil nil [37 118]))          
+    :file "Project.ede"
+    :pointmax 119
+    :fsize 118
+    :lastmodtime '(19433 37467)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dummy.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [19 39])
+            ("hello" function (:type "void") nil [40 94]))          
+    :file "dummy.cpp"
+    :pointmax 95
+    :fsize 94
+    :lastmodtime '(19433 38923)
+    :unmatched-syntax 'nil
+    )
+    (semanticdb-table "a.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 19])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [20 40])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [50 59])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60 73]))                  
+                :type "int")
+                nil [41 96]))          
+    :file "a.cc"
+    :pointmax 97
+    :fsize 96
+    :lastmodtime '(19433 38822)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!vachel!tmp!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,46 @@
+;; Object vachel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "vachel/"
+  :tables (list 
+   (semanticdb-table ".emacs"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("setq-default" code nil nil [40 76])
+            ("global-set-key" code nil nil [123 169])
+            ("add-to-list" code nil nil [210 248])
+            ("add-to-list" code nil nil [249 295])
+            ("load-library" code nil nil [445 472])
+            ("add-to-list" code nil nil [520 569])
+            ("company-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [570 610])
+            ("setq" code nil nil [611 638])
+            ("linum" include nil nil [699 715])
+            ("global-linum-mode" code nil nil [716 737])
+            ("yasnippet" include nil nil [790 810])
+            ("yas/initialize" code nil nil [811 827])
+            ("load-library" code nil nil [933 962])
+            ("ede" include nil nil [963 977])
+            ("global-ede-mode" code nil nil [978 997])
+            ("add-to-list" code nil nil [1036 1082])
+            ("ecb" include nil nil [1110 1124])
+            ("setq" code nil nil [1186 1216])
+            ("ido-mode" code nil nil [1218 1230])
+            ("setq" code nil nil [1231 1255])
+            ("setq" code nil nil [1256 1292])
+            ("global-set-key" code nil nil [1333 1366])
+            ("setq" code nil nil [1374 1526])
+            ("custom-set-variables" code nil nil [1527 1805])
+            ("custom-set-faces" code nil nil [1806 2049]))          
+    :file ".emacs"
+    :pointmax 2050
+    :fsize 2057
+    :lastmodtime '(19433 38346)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!vachel!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )
