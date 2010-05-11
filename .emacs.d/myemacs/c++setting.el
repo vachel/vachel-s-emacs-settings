@@ -51,8 +51,5 @@
 ;;==================company mode============================
 (add-hook 'c++-mode-hook 
 	  (lambda ()
-	    (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")	
-	    (semantic-load-enable-code-helpers)
-	    (semantic-load-enable-semantic-debugging-helpers)
 	    (setq company-idle-delay t)
 	    (company-mode)))

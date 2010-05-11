@@ -31,8 +31,14 @@
 
 ;;========================cedet======================================
 (load-library "cedetsetting")
+(require 'ede)
+(global-ede-mode t)
 
 
+;;==============ECB================
+(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
+;;(require 'ecb-autoloads)
+(require 'ecb)
 
 ;;============================others=======================
 (setq global-font-lock-mode t) 
@@ -49,3 +55,18 @@ delete-old-versioins t
 kept-new-versions 6
 kept-old-versions 2
 version-control t)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40")
+ '(ecb-primary-secondary-mouse-buttons (quote mouse-1--C-mouse-1))
+ '(ecb-source-path (quote ("~/tmp")))
+ '(inhibit-startup-screen t))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
