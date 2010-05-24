@@ -2518,6 +2518,38 @@
     :lastmodtime '(19408 28311)
     :unmatched-syntax '((semantic-list 7256 . 7275) (semantic-list 6161 . 6180) (semantic-list 6027 . 6046) (semantic-list 5872 . 5902) (semantic-list 5791 . 5802) (semantic-list 5774 . 5789) (semantic-list 5695 . 5706) (semantic-list 5678 . 5693) (semantic-list 5615 . 5626) (semantic-list 5598 . 5613) (symbol 5008 . 5030) (semantic-list 4990 . 5005) (semantic-list 4901 . 4931) (symbol 3987 . 4009) (semantic-list 3950 . 3984) (semantic-list 3857 . 3872) (semantic-list 3786 . 3801) (semantic-list 3702 . 3733) (semantic-list 3607 . 3639) (semantic-list 3494 . 3509) (symbol 2858 . 2880) (semantic-list 2840 . 2855) (semantic-list 2771 . 2786) (semantic-list 2705 . 2720) (semantic-list 2606 . 2621) (semantic-list 2549 . 2564) (semantic-list 2495 . 2510) (semantic-list 2423 . 2453) (semantic-list 2358 . 2373) (semantic-list 2296 . 2311) (semantic-list 2237 . 2252) (string 2056 . 2126) (symbol 2050 . 2055) (punctuation 2048 . 2049))
     )
+   (semanticdb-table "select.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("bits/wordsize.h" include (:system-flag t) nil [985 1011])
+            ("__FD_ZERO_STOS" variable (:constant-flag t) nil [1125 1139])
+            ("__FD_ZERO" variable (:constant-flag t) nil [1166 1175])
+            ("__FD_SET" variable (:constant-flag t) nil [1937 1945])
+            ("__FD_CLR" variable (:constant-flag t) nil [2013 2021])
+            ("__FD_ISSET" variable (:constant-flag t) nil [2090 2100]))          
+    :file "select.h"
+    :pointmax 2167
+    :fsize 2166
+    :lastmodtime '(19408 28330)
+    :unmatched-syntax '((string 907 . 976) (symbol 901 . 906) (punctuation 899 . 900))
+    :lexical-table 
+        '(("__FD_CLR" (spp-arg-list ("d" "set") 2021 . 2029) . ((semantic-list "(__FDS_BITS (set)[__FDELT (d)] &= ~__FDMASK (d))" 2033 . 2081)))
+          ("__FD_ZERO_STOS" . ((string "\"stosl\"" 1140 . 1147)))
+          ("__FD_ISSET" (spp-arg-list ("d" "set") 2100 . 2108) . ((semantic-list "((__FDS_BITS (set)[__FDELT (d)] & __FDMASK (d)) != 0)" 2113 . 2166)))
+          ("__FD_ZERO" (spp-arg-list ("fdsp") 1175 . 1181) . 
+              ((DO "do" 1186 . 1188) (semantic-list "{									      \\
+    int __d0, __d1;							      \\
+    __asm__ __volatile__ (\"cld; rep; \" __FD_ZERO_STOS			      \\
+			  : \"=c\" (__d0), \"=D\" (__d1)			      \\
+			  : \"a\" (0), \"0\" (sizeof (fd_set)		      \\
+					  / sizeof (__fd_mask)),	      \\
+			    \"1\" (&__FDS_BITS (fdsp)[0])			      \\
+			  : \"memory\");					      \\
+  }" 1189 . 1509) (WHILE "while" 1510 . 1515) (semantic-list "(0)" 1516 . 1519)))
+          ("__FD_SET" (spp-arg-list ("d" "set") 1945 . 1953) . ((semantic-list "(__FDS_BITS (set)[__FDELT (d)] |= __FDMASK (d))" 1957 . 2004)))
+          )
+
+    )
    )
   :file "!usr!include!bits!semantic.cache"
   :semantic-tag-version "2.0pre7"

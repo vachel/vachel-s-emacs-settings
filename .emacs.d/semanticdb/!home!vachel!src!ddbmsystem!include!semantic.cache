@@ -6,23 +6,24 @@
     :major-mode 'c++-mode
     :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
-            ("string" include (:system-flag t) nil [21 38])
-            ("sqlconnector.h" include nil nil [39 64])
-            ("createdb.h" include nil nil [65 86])
-            ("xmlConfig.h" include nil nil [87 109])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string" include (:system-flag t) nil [40 57])
+            ("sqlconnector.h" include nil nil [58 83])
+            ("createdb.h" include nil nil [84 105])
+            ("xmlConfig.h" include nil nil [106 128])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [110 130])
+                  nil nil)) nil [129 149])
             ("createdb" function
                (:arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [145 159]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [164 178]))                  
                 :type "int")
-                nil [132 301]))          
+                nil [151 601]))          
     :file "createdb.cc"
-    :pointmax 303
-    :fsize 305
-    :lastmodtime '(19432 13384)
+    :pointmax 603
+    :fsize 602
+    :lastmodtime '(19437 1537)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "sqlconnector.h"
@@ -31,87 +32,115 @@
         '( ("SQLCONNECTOR_H" variable (:constant-flag t) nil [32 46])
             ("string" include (:system-flag t) nil [48 65])
             ("vector" include (:system-flag t) nil [66 83])
+            ("mysql/mysql.h" include (:system-flag t) nil [84 108])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [85 105])
+                  nil nil)) nil [109 129])
             ("createDBConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [136 150])
-                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150 162]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160 174])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [174 186])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [186 198])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [198 208]))                  
                 :type "int")
-                nil [107 163])
+                nil [131 209])
             ("dropDBConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [191 205])
-                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [205 217]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [237 251])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [251 263])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [263 275])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 285]))                  
                 :type "int")
-                nil [164 218])
+                nil [210 286])
             ("createTableConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [251 265])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [266 283])
-                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [283 295]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [319 333])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [334 351])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [351 363])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [363 375])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [375 387])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [387 397]))                  
                 :type "int")
-                nil [219 296])
+                nil [287 398])
             ("dropTableConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [327 341])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [342 359]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [429 443])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [444 461])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [461 473])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [473 485])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [485 495]))                  
                 :type "int")
-                nil [297 360])
+                nil [399 496])
             ("insertConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [388 402])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [403 420])
-                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [421 433])
-                    ("Value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [434 447]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [524 538])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [539 556])
+                    ("Value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [557 570])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [570 582])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 594])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [594 604]))                  
                 :type "int")
-                nil [361 448])
+                nil [497 605])
             ("deleteConnector" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [476 490])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [491 508])
-                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [509 521])
-                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [522 539]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [633 647])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [648 665])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [666 683])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [683 695])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [695 707])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [707 717]))                  
                 :type "int")
-                nil [449 540])
+                nil [606 718])
             ("selectConnector" function
                (:prototype-flag t
                 :pointer 1
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [580 594])
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [753 767])
                     ("tableName" variable (:type ("vector" type
                          (:template-specifier 
                             ( ("string" type nil nil nil))                            
                           :type "class")
-                          nil nil)) (reparse-symbol arg-sub-list) [595 620])
-                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [621 633])
-                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [634 651]))                  
-                :type ("vector" type
-                     (:template-specifier 
-                        ( ("string" type nil nil nil))                        
-                      :type "class")
-                      nil nil))
-                nil [541 652]))          
+                          nil nil)) (reparse-symbol arg-sub-list) [768 793])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [794 806])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [807 824])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [824 836])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [836 848])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [848 858]))                  
+                :type ("MYSQL_RES" type (:type "class") nil nil))
+                nil [719 859])
+            ("selectConnectorSC" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [896 910])
+                    ("attribute" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [910 927])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [927 944])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [944 961])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [961 973])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [973 985])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [985 995]))                  
+                :type ("MYSQL_RES" type (:type "class") nil nil))
+                nil [860 996]))          
     :file "sqlconnector.h"
-    :pointmax 661
-    :fsize 660
-    :lastmodtime '(19432 13365)
-    :unmatched-syntax 'nil
+    :pointmax 1004
+    :fsize 1003
+    :lastmodtime '(19437 12174)
+    :unmatched-syntax '((thing 633 . 639))
     :lexical-table 
         '(("SQLCONNECTOR_H")
           )
@@ -156,66 +185,95 @@
                   nil nil)) nil [79 99])
             ("tableInfo" type
                (:members 
-                  ( ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [123 135])
+                  ( ("pk" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [123 133])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [138 150])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [155 167])
                     ("url" variable
                        (:dereference 1
                         :type ("string" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [140 154])
-                    ("num" variable
+                        (reparse-symbol classsubparts) [172 186])
+                    ("cons" variable
                        (:dereference 1
                         :type ("string" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [159 173])
-                    ("atts" variable
+                        (reparse-symbol classsubparts) [191 206])
+                    ("frags" variable
                        (:dereference 1
                         :type ("string" type (:type "class") nil nil))
-                        (reparse-symbol classsubparts) [178 193]))                  
+                        (reparse-symbol classsubparts) [211 227])
+                    ("htype" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [232 245])
+                    ("hattr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [250 263]))                  
                 :type "struct")
-                nil [100 201])
+                nil [100 271])
+            ("hostInfo" type
+               (:members 
+                  ( ("hostname" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [294 310])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [315 327])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [332 342]))                  
+                :type "struct")
+                nil [272 345])
             ("xmlCreateTable" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [228 242])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [242 259])
-                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [260 272]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [372 386])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 403])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [403 415])
+                    ("pk" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [415 426])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [426 438])
+                    ("cons" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [438 453])
+                    ("frags" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [453 469])
+                    ("hattr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [469 482])
+                    ("htype" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [482 495]))                  
                 :type "int")
-                nil [202 273])
+                nil [346 496])
             ("xmlDropTable" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [298 312])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [312 329]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [521 535])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [535 552]))                  
                 :type "int")
-                nil [274 330])
+                nil [497 553])
             ("xmlCreateDb" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [354 368]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [577 591]))                  
                 :type "int")
-                nil [331 369])
+                nil [554 592])
             ("xmlDropDb" function
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [391 405]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [614 628]))                  
                 :type "int")
-                nil [370 406])
+                nil [593 629])
             ("xmlGetTableInfo" function
                (:prototype-flag t
                 :pointer 1
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [842 856])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [856 873]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1065 1079])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1079 1096]))                  
                 :type ("tableInfo" type (:type "class") nil nil))
-                nil [808 874]))          
+                nil [1031 1097])
+            ("xmlGetHostInfo" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :type ("hostInfo" type (:type "class") nil nil))
+                nil [1098 1132]))          
     :file "xmlConfig.h"
-    :pointmax 889
-    :fsize 888
-    :lastmodtime '(19432 14346)
-    :unmatched-syntax 'nil
+    :pointmax 1145
+    :fsize 1144
+    :lastmodtime '(19450 8539)
+    :unmatched-syntax '((thing 250 . 253))
     :lexical-table 
         '(("XMLCONFIG_H")
           )
@@ -235,15 +293,38 @@
                (:prototype-flag t
                 :typemodifiers ("extern")
                 :arguments 
-                  ( ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [130 147])
-                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [148 165])
-                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [166 178]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [130 144])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [144 161])
+                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [162 179])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [180 192]))                  
                 :type "int")
-                nil [107 179]))          
+                nil [107 193])
+            ("createTable" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 231])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [231 248])
+                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [249 266])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [267 279])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [279 291])
+                    ("pk" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [291 301])
+                    ("cons" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [301 316])
+                    ("frags" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [316 332])
+                    ("hattr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [332 345])
+                    ("htype" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [345 358]))                  
+                :type "int")
+                nil [194 359]))          
     :file "createTable.h"
-    :pointmax 189
-    :fsize 188
-    :lastmodtime '(19428 1948)
+    :pointmax 368
+    :fsize 367
+    :lastmodtime '(19450 11692)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("CREATETABLE_H")
@@ -332,90 +413,118 @@
                (:arguments 
                   ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1649 1663])
                     ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1663 1680])
-                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1680 1692]))                  
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1680 1692])
+                    ("pk" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1692 1703])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1703 1715])
+                    ("cons" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1715 1730])
+                    ("frags" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1730 1746])
+                    ("hattr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1746 1759])
+                    ("htype" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1759 1772]))                  
                 :type "int")
-                nil [1630 2508])
-            ("getConfigDoc" function (:type ("xmlDocPtr" type (:type "class") nil nil)) nil [2510 2646])
+                nil [1630 3459])
+            ("getConfigDoc" function (:type ("xmlDocPtr" type (:type "class") nil nil)) nil [3461 3597])
             ("saveConfigDoc" function
                (:arguments 
-                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2665 2679]))                  
+                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3616 3630]))                  
                 :type "int")
-                nil [2647 2803])
+                nil [3598 3754])
             ("xmlCreateDb" function
                (:arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2821 2835]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3772 3786]))                  
                 :type "int")
-                nil [2805 3320])
+                nil [3756 4271])
             ("xmlDropDb" function
                (:arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3335 3349]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4286 4300]))                  
                 :type "int")
-                nil [3321 3634])
+                nil [4272 4585])
             ("xmlDropTable" function
                (:arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3653 3667])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3667 3684]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4604 4618])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4618 4635]))                  
                 :type "int")
-                nil [3636 3990])
+                nil [4587 4941])
             ("findDb" function
                (:arguments 
-                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4009 4023])
-                    ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4023 4037]))                  
+                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4960 4974])
+                    ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4974 4988]))                  
                 :type ("xmlNodePtr" type (:type "class") nil nil))
-                nil [3991 4275])
+                nil [4942 5226])
             ("findTable" function
                (:arguments 
-                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4298 4312])
-                    ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4312 4326])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4326 4343]))                  
+                  ( ("doc" variable (:type ("xmlDocPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5249 5263])
+                    ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5263 5277])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5277 5294]))                  
                 :type ("xmlNodePtr" type (:type "class") nil nil))
-                nil [4277 5000])
+                nil [5228 5951])
             ("xmlGetTableInfo" function
                (:pointer 1
                 :arguments 
-                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5028 5042])
-                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5042 5059]))                  
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5979 5993])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5993 6010]))                  
                 :type ("tableInfo" type (:type "class") nil nil))
-                nil [5001 6331])
-            ("main" function
-               (:arguments 
-                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6922 6922])
-                    ("argv" variable
-                       (:pointer 1
-                        :dereference 1
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [6922 6922]))                  
-                :type "int")
-                nil [6922 6922]))          
+                nil [5952 7666])
+            ("xmlGetHostInfo" function
+               (:pointer 1
+                :type ("hostInfo" type (:type "class") nil nil))
+                nil [7668 8675]))          
     :file "xmlConfig.cc"
-    :pointmax 7065
-    :fsize 6921
-    :lastmodtime '(19433 36451)
+    :pointmax 9353
+    :fsize 9352
+    :lastmodtime '(19450 30481)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "createTable.cc"
     :major-mode 'c++-mode
     :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
-            ("string" include (:system-flag t) nil [21 38])
-            ("sqlconnector.h" include nil nil [39 64])
-            ("createTable.h" include nil nil [65 89])
-            ("xmlConfig.h" include nil nil [90 112])
+            ("stdio.h" include (:system-flag t) nil [21 39])
+            ("string" include (:system-flag t) nil [40 57])
+            ("sqlconnector.h" include nil nil [58 83])
+            ("createTable.h" include nil nil [84 108])
+            ("xmlConfig.h" include nil nil [109 131])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [114 134])
+                  nil nil)) nil [133 153])
             ("createTable" function
                (:arguments 
-                  ( ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [152 169])
-                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [170 187])
-                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [188 200]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [171 185])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [185 202])
+                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [203 220])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [221 233]))                  
                 :type "int")
-                nil [136 479]))          
+                nil [155 991])
+            ("createTable" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1009 1023])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1023 1040])
+                    ("attrlists" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1041 1058])
+                    ("frag" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1059 1071])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1071 1083])
+                    ("pk" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1083 1093])
+                    ("cons" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1093 1108])
+                    ("frags" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1108 1124])
+                    ("hattr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1124 1137])
+                    ("htype" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1137 1150]))                  
+                :type "int")
+                nil [993 1799]))          
     :file "createTable.cc"
-    :pointmax 481
-    :fsize 480
-    :lastmodtime '(19432 16172)
+    :pointmax 1800
+    :fsize 1799
+    :lastmodtime '(19450 31631)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "dropTable.cc"
@@ -423,22 +532,24 @@
     :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
             ("string" include (:system-flag t) nil [21 38])
-            ("dropTable.h" include nil nil [40 62])
-            ("sqlconnector.h" include nil nil [63 88])
-            ("xmlConfig.h" include nil nil [89 111])
+            ("stdio.h" include (:system-flag t) nil [39 57])
+            ("dropTable.h" include nil nil [58 80])
+            ("sqlconnector.h" include nil nil [81 106])
+            ("xmlConfig.h" include nil nil [107 129])
             ("std" using (:type ("std" type
                  (:prototype t
                   :type "namespace")
-                  nil nil)) nil [114 134])
+                  nil nil)) nil [132 152])
             ("dropTable" function
                (:arguments 
-                  ( ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [150 167]))                  
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [168 182])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [182 199]))                  
                 :type "int")
-                nil [136 337]))          
+                nil [154 610]))          
     :file "dropTable.cc"
-    :pointmax 280
-    :fsize 338
-    :lastmodtime '(19432 16187)
+    :pointmax 612
+    :fsize 611
+    :lastmodtime '(19437 476)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "dropTable.h"
@@ -460,11 +571,615 @@
                 nil [103 142]))          
     :file "dropTable.h"
     :pointmax 151
-    :fsize 150
-    :lastmodtime '(19428 1948)
+    :fsize 164
+    :lastmodtime '(19436 62144)
     :unmatched-syntax 'nil
     :lexical-table 
         '(("DROPTABLE_H")
+          )
+
+    )
+   (semanticdb-table "sqlconnector.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cstdio" include (:system-flag t) nil [1 18])
+            ("mysql/mysql.h" include (:system-flag t) nil [19 43])
+            ("sqlconnector.h" include nil nil [44 69])
+            ("iostream" include (:system-flag t) nil [70 89])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [90 110])
+            ("createDBConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [134 148])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [149 161])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [161 173])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [173 183]))                  
+                :type "int")
+                nil [112 486])
+            ("dropDBConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [508 522])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [523 535])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [535 547])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [547 557]))                  
+                :type "int")
+                nil [488 855])
+            ("createTableConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [882 896])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [897 914])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [914 926])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [926 938])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [938 950])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 960]))                  
+                :type "int")
+                nil [857 2092])
+            ("dropTableConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2117 2131])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2132 2149])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2149 2161])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2161 2173])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2173 2183]))                  
+                :type "int")
+                nil [2094 3058])
+            ("insertConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3080 3094])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3095 3112])
+                    ("Value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3113 3126])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3126 3138])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3138 3150])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3150 3160]))                  
+                :type "int")
+                nil [3060 3622])
+            ("deleteConnector" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3644 3658])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3659 3676])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3677 3694])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3694 3706])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3706 3718])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3718 3728]))                  
+                :type "int")
+                nil [3624 4167])
+            ("selectConnector" function
+               (:pointer 1
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4196 4210])
+                    ("tableName" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4211 4236])
+                    ("atts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4237 4249])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4250 4267])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4267 4279])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4279 4291])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4291 4301]))                  
+                :type ("MYSQL_RES" type (:type "class") nil nil))
+                nil [4169 5627])
+            ("selectConnectorSC" function
+               (:pointer 1
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5657 5671])
+                    ("attribute" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5671 5688])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5688 5705])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5705 5722])
+                    ("site" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5722 5734])
+                    ("user" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5734 5746])
+                    ("ps" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5746 5756]))                  
+                :type ("MYSQL_RES" type (:type "class") nil nil))
+                nil [5628 6607]))          
+    :file "sqlconnector.cc"
+    :pointmax 8006
+    :fsize 8005
+    :lastmodtime '(19450 11836)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "delete.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DELETE_H" variable (:constant-flag t) nil [26 34])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("string" include (:system-flag t) nil [56 73])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [75 95])
+            ("Delete" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115 146])
+                    ("conditions" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147 165]))                  
+                :type "int")
+                nil [97 166]))          
+    :file "delete.h"
+    :pointmax 162
+    :fsize 175
+    :lastmodtime '(19436 62117)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DELETE_H")
+          )
+
+    )
+   (semanticdb-table "dropdb.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DROPDB_H" variable (:constant-flag t) nil [26 34])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("string" include (:system-flag t) nil [56 73])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [75 95])
+            ("dropdb" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115 127]))                  
+                :type "int")
+                nil [97 128]))          
+    :file "dropdb.h"
+    :pointmax 138
+    :fsize 137
+    :lastmodtime '(19428 1948)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DROPDB_H")
+          )
+
+    )
+   (semanticdb-table "insert.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("INSERT_H" variable (:constant-flag t) nil [26 34])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("string" include (:system-flag t) nil [56 73])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [75 95])
+            ("insert" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115 129])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [129 146])
+                    ("Value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147 160]))                  
+                :type "int")
+                nil [97 161]))          
+    :file "insert.h"
+    :pointmax 171
+    :fsize 170
+    :lastmodtime '(19436 62164)
+    :unmatched-syntax '((thing 136 . 145))
+    :lexical-table 
+        '(("INSERT_H")
+          )
+
+    )
+   (semanticdb-table "select.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SELECT_H" variable (:constant-flag t) nil [26 34])
+            ("iostream" include (:system-flag t) nil [36 55])
+            ("string" include (:system-flag t) nil [56 73])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [75 95])
+            ("select" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115 129])
+                    ("attribute" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [129 146])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [147 164])
+                    ("condition" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [165 182]))                  
+                :type "int")
+                nil [97 183]))          
+    :file "select.h"
+    :pointmax 193
+    :fsize 192
+    :lastmodtime '(19436 62195)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("SELECT_H")
+          )
+
+    )
+   (semanticdb-table "parse.cc"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "parse.cc"
+    :pointmax 8786
+    :fsize 9281
+    :lastmodtime '(19450 32440)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "token.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TOKEN_H" variable (:constant-flag t) nil [25 32])
+            ("string" include (:system-flag t) nil [34 51])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [53 73])
+            ("Token" type
+               (:members 
+                  ( ("line" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [89 101])
+                    ("count" variable (:type "int") (reparse-symbol classsubparts) [126 136])
+                    ("length" variable (:type "int") (reparse-symbol classsubparts) [160 171])
+                    ("pos" variable (:type "int") (reparse-symbol classsubparts) [198 206])
+                    ("tokens" variable
+                       (:pointer 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [245 260])
+                    ("_getCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [286 291]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [272 292])
+                    ("del" variable (:type "char") (reparse-symbol classsubparts) [371 380])
+                    ("public" label nil (reparse-symbol classsubparts) [381 388])
+                    ("Token" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_line" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [399 412])
+                            ("del" variable (:type "char") (reparse-symbol arg-sub-list) [412 421]))                          
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [393 422])
+                    ("Token" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("_line" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [430 443]))                          
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [424 444])
+                    ("getCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [459 464]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [446 465])
+                    ("getLength" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [481 486]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [467 487])
+                    ("getPos" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [500 505]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [489 506])
+                    ("next" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [520 525]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [508 526]))                  
+                :type "class")
+                nil [75 529]))          
+    :file "token.h"
+    :pointmax 538
+    :fsize 537
+    :lastmodtime '(19446 45455)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TOKEN_H")
+          )
+
+    )
+   (semanticdb-table "parse.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("PARSE_H" variable (:constant-flag t) nil [25 32])
+            ("iostream" include (:system-flag t) nil [34 53])
+            ("sstream" include (:system-flag t) nil [54 72])
+            ("algorithm" include (:system-flag t) nil [73 93])
+            ("createdb.h" include nil nil [95 116])
+            ("dropdb.h" include nil nil [117 136])
+            ("createTable.h" include nil nil [137 161])
+            ("dropTable.h" include nil nil [162 184])
+            ("select.h" include nil nil [185 204])
+            ("insert.h" include nil nil [205 224])
+            ("delete.h" include nil nil [225 244])
+            ("sqlconnector.h" include nil nil [245 270])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [272 292])
+            ("parseTableName" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [320 327]))                  
+                :type "int")
+                nil [294 328])
+            ("parseFragmentation" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [359 366]))                  
+                :type "int")
+                nil [329 367])
+            ("parseDBName" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [391 398]))                  
+                :type "int")
+                nil [368 399])
+            ("parseCommand" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("command" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [425 440]))                  
+                :type "int")
+                nil [401 441]))          
+    :file "parse.h"
+    :pointmax 450
+    :fsize 449
+    :lastmodtime '(19428 1948)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PARSE_H")
+          )
+
+    )
+   (semanticdb-table "delete.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("delete.h" include nil nil [40 59])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [61 81])
+            ("Delete" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 108])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108 125])
+                    ("conditions" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [126 144]))                  
+                :type "int")
+                nil [83 1380]))          
+    :file "delete.cc"
+    :pointmax 1382
+    :fsize 1381
+    :lastmodtime '(19450 33068)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "insert.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("stdlib.h" include (:system-flag t) nil [39 58])
+            ("stdio.h" include (:system-flag t) nil [59 77])
+            ("xmlConfig.h" include nil nil [78 100])
+            ("sqlconnector.h" include nil nil [101 126])
+            ("insert.h" include nil nil [127 146])
+            ("token.h" include nil nil [147 165])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [166 186])
+            ("compareWithCons" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [207 220])
+                    ("cons" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [220 232])
+                    ("type" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [232 244]))                  
+                :type "int")
+                nil [187 245])
+            ("insert" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [258 272])
+                    ("tableName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [272 289])
+                    ("Value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [290 303]))                  
+                :type "int")
+                nil [247 1763])
+            ("compareWithCons" function
+               (:arguments 
+                  ( ("value" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1785 1798])
+                    ("cons" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1798 1810])
+                    ("type" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1810 1822]))                  
+                :type "int")
+                nil [1765 2622]))          
+    :file "insert.cc"
+    :pointmax 2623
+    :fsize 2622
+    :lastmodtime '(19450 16021)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "select.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("stdio.h" include (:system-flag t) nil [39 57])
+            ("iomanip" include (:system-flag t) nil [58 76])
+            ("vector" include (:system-flag t) nil [77 94])
+            ("parse.h" include nil nil [96 114])
+            ("util.h" include nil nil [115 132])
+            ("select.h" include nil nil [133 152])
+            ("sqlconnector.h" include nil nil [153 178])
+            ("xmlConfig.h" include nil nil [179 201])
+            ("token.h" include nil nil [202 220])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [222 242])
+            ("getQueryTree" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [262 276])
+                    ("attributes" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [277 295])
+                    ("tables" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [296 310])
+                    ("conditions" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [311 329]))                  
+                :type "void")
+                nil [244 1647])
+            ("getFragAttr" function
+               (:arguments 
+                  ( ("cons" variable
+                       (:dereference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2238 2253]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [2219 2320])
+            ("attrInTableFrag" function
+               (:arguments 
+                  ( ("attr" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2343 2355])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("tableInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2356 2372]))                  
+                :type "bool")
+                nil [2322 2442])
+            ("queryOptimHor" function
+               (:arguments 
+                  ( ("dbName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2473 2487])
+                    ("tables" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2488 2502])
+                    ("conditions" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2503 2521]))                  
+                :type ("vector" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [2444 3606])
+            ("select" function
+               (:arguments 
+                  ( ("DBName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3619 3633])
+                    ("attributes" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3634 3652])
+                    ("tables" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3653 3667])
+                    ("conditions" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3668 3686]))                  
+                :type "int")
+                nil [3608 5762]))          
+    :file "select.cc"
+    :pointmax 5983
+    :fsize 6086
+    :lastmodtime '(19450 28104)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dropdb.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("stdio.h" include (:system-flag t) nil [39 57])
+            ("sqlconnector.h" include nil nil [58 83])
+            ("dropdb.h" include nil nil [84 103])
+            ("xmlConfig.h" include nil nil [104 126])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [127 147])
+            ("dropdb" function
+               (:arguments 
+                  ( ("name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [160 172]))                  
+                :type "int")
+                nil [149 582]))          
+    :file "dropdb.cc"
+    :pointmax 584
+    :fsize 583
+    :lastmodtime '(19437 1599)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "token.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("token.h" include nil nil [1 19])
+            ("Token" function
+               (:constructor-flag t
+                :parent "Token"
+                :arguments 
+                  ( ("_line" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33 46])
+                    ("_del" variable (:type "char") (reparse-symbol arg-sub-list) [46 56]))                  
+                :type ("Token" type (:type "class") nil nil))
+                nil [20 205])
+            ("Token" function
+               (:constructor-flag t
+                :parent "Token"
+                :arguments 
+                  ( ("_line" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [219 232]))                  
+                :type ("Token" type (:type "class") nil nil))
+                nil [206 377])
+            ("getCount" function
+               (:parent "Token"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [399 404]))                  
+                :type "int")
+                nil [379 423])
+            ("getLength" function
+               (:parent "Token"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [446 451]))                  
+                :type "int")
+                nil [425 471])
+            ("getPos" function
+               (:parent "Token"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [491 496]))                  
+                :type "int")
+                nil [473 513])
+            ("next" function
+               (:parent "Token"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [534 539]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [515 842])
+            ("_getCount" function
+               (:parent "Token"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [865 870]))                  
+                :type "int")
+                nil [844 1171]))          
+    :file "token.cc"
+    :pointmax 1174
+    :fsize 1173
+    :lastmodtime '(19446 46168)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "util.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UTIL_H" variable (:constant-flag t) nil [24 30])
+            ("iostream" include (:system-flag t) nil [32 51])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [53 73])
+            ("showBanner" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [97 102]))                  
+                :type "int")
+                nil [75 103])
+            ("printSpace" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [127 131]))                  
+                :type "void")
+                nil [104 132]))          
+    :file "util.h"
+    :pointmax 141
+    :fsize 140
+    :lastmodtime '(19446 47677)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UTIL_H")
           )
 
     )

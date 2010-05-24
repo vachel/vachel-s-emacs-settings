@@ -14,20 +14,14 @@
     )
    (semanticdb-table "dummy.cpp"
     :major-mode 'c++-mode
-    :tags 
-        '( ("string" include (:system-flag t) nil [1 18])
-            ("std" using (:type ("std" type
-                 (:prototype t
-                  :type "namespace")
-                  nil nil)) nil [19 39])
-            ("hello" function (:type "void") nil [40 94]))          
+    :tags nil
     :file "dummy.cpp"
-    :pointmax 95
-    :fsize 94
-    :lastmodtime '(19433 38923)
+    :pointmax 287
+    :fsize 286
+    :lastmodtime '(19435 53842)
     :unmatched-syntax 'nil
     )
-    (semanticdb-table "a.cc"
+   (semanticdb-table "a.cc"
     :major-mode 'c++-mode
     :tags 
         '( ("iostream" include (:system-flag t) nil [1 19])

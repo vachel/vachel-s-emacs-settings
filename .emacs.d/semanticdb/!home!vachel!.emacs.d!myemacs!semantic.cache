@@ -5,21 +5,25 @@
    (semanticdb-table "c++setting.el"
     :major-mode 'emacs-lisp-mode
     :tags 
-        '( ("cc-mode" include nil nil [49 67])
-            ("c-set-offset" code nil nil [68 97])
-            ("c-set-offset" code nil nil [98 123])
-            ("c-set-offset" code nil nil [124 159])
-            ("setq" code nil nil [206 277])
-            ("my-c-mode-common-hook" function nil nil [297 1204])
-            ("add-hook" code nil nil [1205 1258])
-            ("add-hook" code nil nil [1259 1322])
-            ("my-c++-mode-hook" function nil nil [1340 1485])
-            ("add-hook" code nil nil [1487 1530])
-            ("add-hook" code nil nil [1593 1687]))          
+        '( ("cc-mode" include nil nil [50 68])
+            ("my-c-initialization-hook" function nil nil [209 304])
+            ("add-hook" code nil nil [305 364])
+            ("setq" code nil nil [408 458])
+            ("setq" code nil nil [505 576])
+            ("my-c-style" variable
+               (:constant-flag t
+                :default-value (quote ("stroustrup" (c-tab-always-indent . t) (c-comment-only-line-offset . 4) (c-hanging-braces-alist (substatement-open after) (brace-list-open)) (c-hanging-colons-alist (member-init-intro before) (inher-intro) (case-label after) (label after) (access-label after)) (c-cleanup-list scope-operator empty-defun-braces defun-close-semi brace-else-brace brace-elseif-brace) (c-offsets-alist (arglist-close . c-lineup-arglist) (substatement-open . 0) (case-label . 4) (block-open . 0) (knr-argdecl-intro . -)) (c-echo-syntactic-information-p . t))))
+                nil [609 1694])
+            ("c-add-style" code nil nil [1695 1730])
+            ("my-c-mode-common-hook" function nil nil [1757 2144])
+            ("add-hook" code nil nil [2145 2198])
+            ("my-c++-mode-hook" function nil nil [2236 2379])
+            ("add-hook" code nil nil [2381 2424])
+            ("add-hook" code nil nil [2486 2580]))          
     :file "c++setting.el"
-    :pointmax 1688
-    :fsize 1783
-    :lastmodtime '(19433 34524)
+    :pointmax 2581
+    :fsize 2642
+    :lastmodtime '(19450 33275)
     :unmatched-syntax 'nil
     )
    (semanticdb-table "cedetsetting.el"
@@ -61,6 +65,27 @@
     :pointmax 1210
     :fsize 1261
     :lastmodtime '(19433 36390)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cppstyle.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 
+        '( ("cc-mode" include nil nil [21 39])
+            ("MyCppStyle" variable
+               (:constant-flag t
+                :default-value (quote ((c-tab-always-indent . t) (c-comment-only-line-offset . 0) (c-hanging-braces-alist (substatement-open after) (brace-list-open)) (c-cleanup-list comment-close-slash compact-empty-funcall) (c-offsets-alist (substatement-open . 0) (innamespace . 0) (case-label . +) (access-label . -) (inline-open . 0) (block-open . 0)) (setq comment-start "/*" comment-end "*/") (setq indent-tabs-mode nil))))
+                nil [40 840])
+            ("c-add-style" code nil nil [841 878])
+            ("MyCppHook" function nil nil [950 1069])
+            ("add-hook" code nil nil [1128 1164])
+            ("setq" code nil nil [1287 1360])
+            ("setq" code nil nil [1361 1434])
+            ("setq" code nil nil [1435 1510])
+            ("add-hook" code nil nil [1573 1667]))          
+    :file "cppstyle.el"
+    :pointmax 1668
+    :fsize 1889
+    :lastmodtime '(19435 54520)
     :unmatched-syntax 'nil
     )
    )

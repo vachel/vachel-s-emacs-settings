@@ -1,0 +1,18 @@
+;; Object ddbmsystem/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ddbmsystem/"
+  :tables (list 
+   (semanticdb-table "main.cc"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "main.cc"
+    :pointmax 443
+    :fsize 441
+    :lastmodtime '(19450 33298)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!vachel!src!ddbmsystem!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

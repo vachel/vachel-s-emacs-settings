@@ -31,12 +31,13 @@
             ("setq" code nil nil [1256 1292])
             ("global-set-key" code nil nil [1333 1366])
             ("setq" code nil nil [1374 1526])
-            ("custom-set-variables" code nil nil [1527 1805])
-            ("custom-set-faces" code nil nil [1806 2049]))          
+            ("custom-set-variables" code nil nil [1527 1941])
+            ("custom-set-faces" code nil nil [1942 2185])
+            ("put" code nil nil [2187 2221]))          
     :file ".emacs"
-    :pointmax 2050
-    :fsize 2057
-    :lastmodtime '(19433 38346)
+    :pointmax 2222
+    :fsize 2229
+    :lastmodtime '(19435 52592)
     :unmatched-syntax 'nil
     )
    )
